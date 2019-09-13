@@ -18,7 +18,7 @@
     <div class="col-sm-12" style="background:white;padding:10px">
         <div class="thumbnail">
             {% if obj.image %}
-                <img src="{{ obj.image.url }}" class="img-responsive" />
+                <img src="{{ obj.image.url }}" class="img-responsive" style="height:400px;background-color:blue !important"/>
             {% endif %}
             <div class="caption">
             <h3>
@@ -28,7 +28,7 @@
             {% if obj.user.get_full_name %}
             <p>Author : {{ obj.user.get_full_name }} </p>
             {% endif %}
-            <p> {{ obj.content | linebreaks | truncatechars:120 }} </p>
+            <p> {{ obj.content | safe | linebreaks | truncatechars:120  }} </p>
             <p style="text-align:left"><a href='{{ obj.get_absolute_url }}' class="btn btn-primary" role="button">بیشتر </a> </p>
             {% comment %} {{ obj.updated }}<br/>
             {{ obj.id }}<br/> {% endcomment %}
@@ -44,22 +44,59 @@
             <a href="?{{ page_request_var}}={{ object_list.previous_page_number }}
             {% if request.GET.query %}
             &query={{ request.GET.query }}
-            {% endif %}">previous</a>
+            {% endif %}">قبلی</a>
         {% endif %}
 
         <span class="current">
-            Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+            صفحه {{ object_list.number }} از {{ object_list.paginator.num_pages }}.
         </span>
 
         {% if object_list.has_next %}
             <a href="?{{ page_request_var}}={{ object_list.next_page_number }}
             {% if request.GET.query %}
             &query={{ request.GET.query }}
-            {% endif %}">next</a>
+            {% endif %}">بعدی</a>
             {% comment %} <a href="?page={{ object.paginator.num_pages }}">last &raquo;</a> {% endcomment %}
         {% endif %}
     </span>
 </div>
+
+
+
+
+
+{% comment %} <nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      {% if object_lis.has_previous %}
+      <a
+        href="?{{ page_request_var}}={{ object_list.previous_page_number }}
+        {% if request.GET.query %} &query={{ request.GET.query }} {% endif %}"
+        aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+      {% endif %}
+    </li>
+
+    <li><a href="#">{{ object_list.number }}</a></li>
+
+    <li>
+      {% if onject_list.has_next %}
+        <a
+          href="?{{ page_request_var}}={{ object_list.next_page_number }}
+            {% if request.GET.query %}
+            &query={{ request.GET.query }}
+            {% endif %}"
+          aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      {% endif %}
+    </li>
+  </ul>
+</nav> {% endcomment %}
+
+
+
 
 </div>
 </div>
