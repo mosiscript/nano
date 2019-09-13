@@ -1,0 +1,38 @@
+{% extends "registration/base.html" %}
+
+{% block content %}
+    <div class='col-6'>
+        <div class='card mt-5'>
+            <div class='card-header'>
+                Register
+            </div>
+             <div class='card-body'>
+                <form actions='{% url 'register' %}' method='post'>
+                    {% csrf_token %}
+                    <div class='form-group'>
+                        {{ form.username.label_tag}}
+                        <input type='text' name='username' id='id_username' class='form-control' required autofocus maxlength='150'>
+                        {{ form.username.help_text }}
+                        {{ form.username.errors | first }}
+                    </div>
+                    <div class='form-group'>
+                        {{ form.password1.label_tag}}
+                        <input type='password' name='password1' id='id_password1' class='form-control' required >
+                        {{ form.password1.help_text }}
+                        {{ form.password1.errors | first }}
+                    </div>
+                    <div class='form-group'>
+                        {{ form.password2.label_tag}}
+                        <input type='password' name='password2' id='id_password2' class='form-control' required >
+                        {{ form.password2.help_text }}
+                        {{ form.password2.errors | first }}
+                    </div>
+                    <button type='submit' class='btn btn-danger'>Register</button>
+                </form>
+            
+            </div>
+
+        </div>
+    </div>
+
+{% endblock  %}

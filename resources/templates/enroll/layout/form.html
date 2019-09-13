@@ -1,0 +1,37 @@
+<div class='container' >
+    <div class=row>
+        <div class='col-md-8 col-md-offset-2' style="background:white;padding:20px">
+            <h2 class="alert alert-success text-center"> ثبت نام  </h2>
+            <div class=''></div>
+            <form action="{% url 'enroll:enroll' %}" method='POST'>
+                {% csrf_token %}
+                <div class='form-group'>
+                  <label for="name" class="pull-right"> نام و نام خانوادگی </label>
+                  <input  type='text'  name='name' class='form-control {% if form.name.errors %} is-invalid {% endif %}' id='name'   />
+                  <div class="invalid-feedback">
+                    {{form.name.errors}}
+                  </div>
+                </div>
+
+                <label for="sender" class="pull-right"> ایمیل </label>
+                <div class='form-group'>
+                  <input  type='email'  name='email' class='form-control {% if form.email.errors %} is-invalid {% endif %}' id='email'  />
+                  <div class="invalid-feedback">
+                    {{form.email.errors}}
+                  </div>
+                </div>
+
+                <label for="mobile" class="pull-right"> شماره همراه </label>
+                <div class='form-group'>
+                  <input  type='number'  name='mobile' class='form-control {% if form.mobile.errors %} is-invalid {% endif %}' id='mobile'  />
+                  <div class="invalid-feedback">
+                    {{form.mobile.errors}}
+                  </div>
+                </div>
+                <!-- {{ form.as_p }} -->
+                <button type='submit' class='btn btn-lg btn-success pull-left'> ارسال </button>
+            </form>
+
+        </div>
+    </div>
+</div>

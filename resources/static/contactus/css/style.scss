@@ -1,0 +1,377 @@
+@import "compass/css3";
+// iransans font
+@include font-face(iransans, fonts/iransans);
+@font-face {
+  font-family: "iransans";
+  src: url("./fonts/iransans/IRANSansWeb(FaNum).eot?") format("eot"),
+  url("./fonts/iransans/IRANSansWeb(FaNum).woff2") format("woff2"),
+  url("./fonts/iransans/IRANSansWeb(FaNum).woff") format("woff"),
+  url("./fonts/iransans/IRANSansWeb(FaNum).ttf") format("truetype");
+  //url("./fonts/iransans/IRANSansWeb(FaNum).svg#Samplino") format("svg");
+}
+// yekan number font
+@include font-face(yekannumber, fonts/yekan);
+@font-face {
+  font-family: "yekannumber";
+  src: url("./fonts/yekan/yekannumbers.eot?") format("eot"),
+  //url("./fonts/yekan/yekannumbers.woff2") format("woff2"),
+  url("./fonts/yekan/yekannumbers.woff") format("woff"),
+  url("./fonts/yekan/yekannumbers.ttf") format("truetype"),
+  url("./fonts/yekan/yekannumbers.svg#Samplino") format("svg");
+}
+// yekan font
+@include font-face(yekan, fonts/yekan);
+@font-face {
+  font-family: "yekan";
+  src: url("./fonts/yekan/yekan.eot?") format("eot"),
+  //url("./fonts/yekan/yekan.woff2") format("woff2"),
+  url("./fonts/yekan/yekan.woff") format("woff"),
+  url("./fonts/yekan/yekan.ttf") format("truetype"),
+  url("./fonts/yekan/yekan.svg#Samplino") format("svg");
+}
+
+body {
+  font-family: yekannumber ,  yekan !important;
+  background-color: #ebeced;
+  //border: 1px solid red;
+}
+
+//$color : #9b59b6;
+$color : #2980b9;
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    a {
+      color: $color;
+      cursor: pointer;
+      text-decoration: none !important;
+    }
+  }
+}
+
+header {
+  background-color: white;
+  border-top: 4px solid $color;
+  .top-nav {
+    //border: 1px solid black;
+    height: 150px;
+    position: relative;
+    padding-top: 10px;
+    #logo {
+      li{
+        a {
+          img {
+            width: 80px;
+
+          }
+        }
+      }
+    }
+    #title {
+      font-family: yekan;
+      color: #2c3e50;
+      a{
+        text-decoration: none;
+        color: #2c3e50;
+        cursor: pointer;
+      }
+    }
+    #top-link {
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        a {
+          color: $color;
+          font-family: yekan;
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+    #nav-absolute {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      margin-left: 80px;
+      margin-top: 60px;
+      height: 60px;
+      z-index: 9;
+      width: 1000px;
+      .navbar {
+        @include border-radius(0);
+        border: none;
+      }
+      .navbar-default {
+        background-color: $color !important;
+        height: 80px;
+        .navbar-nav {
+          li {
+            padding-top: 12px;
+            a {
+              color: white;
+              font-size: 16px;
+              font-family: yekan !important;
+              &:hover {
+                color: #2c3e50;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+main {
+  position: relative;
+  #slideshow {
+    height: 483px;
+    overflow: hidden !important;
+    z-index: -1;
+  }
+  #main_titr {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 200px;
+    //background-color: #16a085;
+    background-color: $color;
+    color: white;
+    span {
+      display: block;
+      padding-top: 50px;
+    }
+  }
+  #services {
+    margin-top: 100px;
+     .col-md-12 {
+       .title {
+         margin-bottom: 50px;
+         color: $color;
+         font-weight: bolder;
+         line-height: 0.5;
+         text-align: center;
+         span {
+           display: inline-block;
+           position: relative;
+           background-color: transparent;
+           //border: 1px solid red;
+           padding: 10px;
+           &:before {
+             content: "";
+             position: absolute;
+             height: 5px;
+             border-bottom: 1px solid $color;
+             border-top: 1px solid $color;
+             top: 12px;
+             width: 300px;
+             right: 100%;
+             margin-right: 15px;
+           }
+           &:after {
+             content: "";
+             position: absolute;
+             height: 5px;
+             border-bottom: 1px solid $color;
+             border-top: 1px solid $color;
+             top: 12px;
+             width: 300px;
+             left: 100%;
+             margin-left: 15px;
+           }
+         }
+       }
+     }
+     .col-md-4 {
+       margin: 0;
+       padding: 0;
+       .service-box {
+         display: block;
+         text-decoration: none;
+         cursor: pointer;
+         //border: 1px solid red;
+         padding: 10px;
+         //background-color: green;
+         //margin: 10px;
+         margin: 0;
+         padding: 0;
+         height: 250px;
+         div {
+           padding-top: 15px;
+           h4 {
+             color: white;
+           }
+           h5 {
+             color: white;
+           }
+         }
+       }
+     }
+   }
+  #teammate {
+    margin-top: 100px;
+    .col-md-12 {
+      .title {
+        margin-bottom: 50px;
+        color: $color;
+        font-weight: bolder;
+        line-height: 0.5;
+        text-align: center;
+        span {
+          display: inline-block;
+          position: relative;
+          background-color: transparent;
+          //border: 1px solid red;
+          padding: 10px;
+          &:before {
+            content: "";
+            position: absolute;
+            height: 5px;
+            border-bottom: 1px solid $color;
+            border-top: 1px solid $color;
+            top: 12px;
+            width: 300px;
+            right: 100%;
+            margin-right: 15px;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            height: 5px;
+            border-bottom: 1px solid $color;
+            border-top: 1px solid $color;
+            top: 12px;
+            width: 300px;
+            left: 100%;
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+    .col-md-4 {
+      .teammate-box {
+        //background-color: #ecf0f1 ;
+        padding: 20px;
+        background-color: white ;
+        margin: 10px;
+        @include border-radius(50%);
+
+        //border: 1px solid red;
+        height: 300px;
+        width: 300px;
+        div {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  #space_background {
+    margin-top: 100px;
+    //margin-bottom: 100px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: url("../img/space_background.jpg") fixed;
+  }
+  #map{
+    height: 400px;
+    border-top: 3px solid $color;
+    //border: 1px solid green;
+  }
+}
+#register.modal {
+  font-family: yekan;
+  .modal-content {
+    @include box-shadow(0);
+    @include border-radius(0);
+    .modal-header {
+      border: none !important;
+      background-color: $color;
+      color: white;
+    }
+    .modal-body {
+      .form-group {
+        direction: rtl;
+        text-align: right;
+      }
+      button {
+        background-color: $color;
+        color: white;
+      }
+    }
+  }
+}
+
+footer {
+  height: 300px;
+  background-color: #2c3e50;
+  border-top: 3px solid $color;
+  .container {
+    .row {
+      .col-md-4 {
+        #subscribe {
+          margin-top: 50px;
+          //padding-top: 50px;
+          #user_email {
+            width: 100%;
+            @include border-radius(0);
+          }
+          button{
+            @include border-radius(0);
+          }
+        }
+        h3 {
+          color: white;
+        }
+        ul {
+          margin-top: 10px;
+          li {
+            margin-top: 12px;
+            display: inline-block !important;
+            margin-left: 10px;
+            list-style-type: none;
+            direction: rtl;
+            text-align: right;
+            width: 100%;
+            a {
+              color: #bdc3c7;
+              .titr {
+                padding-top: 5px;
+                padding-right: 5px;
+              }
+            }
+        }
+        #licence_logo {
+          li {
+            img {
+              margin-right: 20px;
+            }
+            }
+          }
+        }
+        ul#social_network {
+          //border: 1px solid red;
+          margin: 0;
+          padding: 0;
+          margin-top: 10px;
+          //margin-right: -174px;
+          li {
+            margin-left: 5px;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

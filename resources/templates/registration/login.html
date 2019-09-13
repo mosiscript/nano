@@ -1,0 +1,30 @@
+{% extends "registration/base.html" %}
+
+{% block content %}
+    <div class='col-6'>
+        <div class='card mt-5''>
+            <div class='card-header'>
+                Login
+            </div>
+             <div class='card-body'>
+                <form actions='{% url 'login' %}' method='post'>
+                    {% csrf_token %}
+                    <div class='form-group'>
+                        {{ form.username.label_tag}}
+                        <input type='text' name='username' id='id_username' class='form-control' required >
+                        {{ form.username.errors | first }}
+                    </div>
+                    <div class='form-group'>
+                        {{ form.username.label_tag}}
+                        <input type='password' name='password' id='id_password' class='form-control' required >
+                        {{ form.password.errors | first }}
+                    </div>
+                    <button type='submit' class='btn btn-danger'>Login</button>
+                </form>
+            
+            </div>
+
+        </div>
+    </div>
+
+{% endblock  %}

@@ -1,0 +1,34 @@
+<header>
+    <div class="container-fluid">
+	<div class="row">
+		<nav class="navbar navbar-default navbar-fixed-top " id="my-nav">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+					        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.php">
+							<i class="fa fa-home fa-lg homepage"></i>
+							<span class="sr-only">(current)</span></a></li>
+						<li><a href="#"> درباره ما </a></li>
+						<li><a href="#"> تماس با ما </a></li>
+						<li><a href="{% url 'posts:post_list' %}"> وبلاگ </a></li>
+						<li><a href="gallery.php"> گالری تصاویر </a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-left my-login ">
+						<li><a href="{% url 'enroll:enroll' %}"><span class="fa fa-user myRegister "></span> ثبت نام </a></li>
+					</ul>
+
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</div>
+</header>

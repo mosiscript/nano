@@ -1,0 +1,97 @@
+<footer id="footer" style="margin-top:40px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 pull-right">
+                <h3 class="text-right">تماس با ما</h3>
+                <ul>
+                    <li class="pull-right">
+                        <a href="">
+                            <span class="material-icons pull-right" style="font-size: 25px">place</span>
+                            <span class="titr"> آران و بیدگل - خیابان امام - کوچه 20</span>
+                        </a>
+                    </li>
+                    <li class="pull-right">
+                        <a href="">
+                            <span class="material-icons pull-right" style="font-size: 25px">phone</span>
+                            <span class="titr">09355739363 - 03154755201 </span>
+                        </a>
+                    </li>
+                    <li class="pull-right">
+                        <a href="">
+                            <span class="material-icons pull-right" style="font-size: 25px">email</span>
+                            <span class="titr">mosi.ghorbani@gmail.com </span>
+                        </a>
+                    </li>
+                    <li class="pull-right">
+                        <a href="">
+                            <span class="material-icons pull-right" style="font-size: 25px">star</span>
+                            <span class="titr">تماس همه روزه از 8 تا 20 </span>
+                        </a>
+                    </li>
+                    <br>
+                    <br>
+                    <li class="pull-right">
+                        <ul id="social_network" class="pull-right">
+                            <li><a href=""><img src="static/img/social/facebook.png" alt=""></a></li>
+                            <li><a href=""><img src="static/img/social/youtube.png" alt=""></a></li>
+                            <li><a href=""><img src="static/img/social/telegram.png" alt=""></a></li>
+                            <li><a href=""><img src="static/img/social/line.png" alt=""></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 pull-right">
+                <h3 class="text-right">دسترسی سریع</h3>
+                <ul>
+                    <li class="pull-right">
+                        <a href="">
+                            <span class="material-icons pull-right" style="font-size: 25px">place</span>
+                            <span class="titr"><a href="">ستاد نانو</a></span>
+                        </a>
+                    </li>
+                    <li class="pull-right">
+                        <a href="">
+                            <span class="material-icons pull-right" style="font-size: 25px">place</span>
+                            <span class="titr"><a href=""> باشگاه نانو دانش آموزی</a></span>
+                        </a>
+                    </li>
+                    <li class="pull-right">
+                        <a href="">
+                            <span class="material-icons pull-right" style="font-size: 25px">place</span>
+                            <span class="titr"><a href=""> نخبگان ریاست جمهوری</a></span>
+                        </a>
+                    </li>
+                    <li class="pull-right">
+                        <a href="">
+                            <span class="material-icons pull-right" style="font-size: 25px">place</span>
+                            <span class="titr"><a href=""> آموزش و پرورش شهرستان آران و بیدگل</a></span>
+                        </a>
+                    </li>
+                    <li class="pull-right">
+                        <a href="">
+                            <span class="material-icons pull-right" style="font-size: 25px">place</span>
+                            <span class="titr"><a href=""> آموزش دوره های نانو تکنولوژِی</a></span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 pull-right">
+                <form class="form-inline row" id="subscribe" action="{% url 'home:subscribe' %}" method='POST'>
+                    {% csrf_token %}
+                    <div class="form-group col-md-3">
+                        <button type="submit" class="btn btn-default ">مشترک شوید</button>
+                    </div>
+                    <div class="form-group col-md-9">
+                        <input type="email" name="email" class="form-control" id="user_email" placeholder="ایمیل شما">
+                    </div>
+                </form>
+                <ul id="licence_logo">
+                    <li style="width: auto"><img src="static/img/licence_1.png" alt="licence"></li>
+                    <li style="width: auto"><img src="static/img/licence_2.png" alt="licence"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>

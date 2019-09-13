@@ -1,0 +1,34 @@
+{% extends "articles/master.html" %}
+
+{% block content %}
+    <h2> Send Article : </h2>
+    {% comment %} <form action = '{% url 'articles:article.send.store' %}' method='POST'> {% endcomment %}
+
+    <form action = '{% url 'articles:article.send' %}' method='POST'>
+        {% csrf_token %}
+        <!-- {{form}} -->
+        <div class = 'form-group'>
+            <!-- <label for='title'> title: </label> -->
+            {{form.title.label_tag}}
+            <input type='text' name='title' class='form-control {% if form.title.errors %} is-invalid {% endif %}' id='title'>
+            <div class='invalid-feedback'>
+                {{ form.title.errors | first}}
+            </div>
+        </div>
+        <div class = 'form-group'>
+            <label for='title'> body: </label>
+            <textarea name='body' cols='30' rows='10' class='form-control {% if form.body.errors %} is-invalid {% endif %}' id='body'></textarea>
+            <div class='invalid-feedback'>
+                {{ form.body.errors}}
+            </div>
+        </div>
+        <div class = 'form-group'>
+            <label for='title'> title: </label>
+            <input type='date' name='published_at' class='form-control {% if form.published_at.errors %} is-invalid {% endif %}' id='published_at'>
+            <div class='invalid-feedback'>
+                {{ form.published_at.errors}}
+            </div>
+        </div>
+        <button type='submit' class='btn btn-danger'> Send </button>
+    </form>
+{% endblock %}

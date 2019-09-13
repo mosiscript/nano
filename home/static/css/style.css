@@ -1,0 +1,387 @@
+@font-face {
+  font-family: "iransans";
+  src: fonts/iransans;
+}
+@font-face {
+  font-family: "iransans";
+  src: url("../fonts/iransans/IRANSansWeb(FaNum).eot?") format("eot"), url("../fonts/iransans/IRANSansWeb(FaNum).woff2") format("woff2"), url("../fonts/iransans/IRANSansWeb(FaNum).woff") format("woff"), url("../fonts/iransans/IRANSansWeb(FaNum).ttf") format("truetype");
+}
+@font-face {
+  font-family: "yekannumber";
+  src: fonts/yekan;
+}
+@font-face {
+  font-family: "yekannumber";
+  src: url("../fonts/yekan/yekannumbers.eot?") format("eot"), url("../fonts/yekan/yekannumbers.woff") format("woff"), url("../fonts/yekan/yekannumbers.ttf") format("truetype"), url("../fonts/yekan/yekannumbers.svg#Samplino") format("svg");
+}
+@font-face {
+  font-family: "yekan";
+  src: fonts/yekan;
+}
+@font-face {
+  font-family: "yekan";
+  src: url("../fonts/yekan/yekan.eot?") format("eot"), url("../fonts/yekan/yekan.woff") format("woff"), url("../fonts/yekan/yekan.ttf") format("truetype"), url("../fonts/yekan/yekan.svg#Samplino") format("svg");
+}
+/* line 33, ../sass/style.scss */
+body {
+  font-family: yekannumber ,  yekan !important;
+  background-color: #ebeced;
+}
+
+/* line 41, ../sass/style.scss */
+ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 44, ../sass/style.scss */
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* line 48, ../sass/style.scss */
+ul li a {
+  color: #2980b9;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+/* line 56, ../sass/style.scss */
+header {
+  background-color: white;
+  border-top: 4px solid #2980b9;
+}
+/* line 59, ../sass/style.scss */
+header .top-nav {
+  height: 150px;
+  position: relative;
+  padding-top: 10px;
+}
+/* line 67, ../sass/style.scss */
+header .top-nav #logo li a img {
+  width: 80px;
+}
+/* line 74, ../sass/style.scss */
+header .top-nav #title {
+  font-family: yekan;
+  color: #2c3e50;
+}
+/* line 77, ../sass/style.scss */
+header .top-nav #title a {
+  text-decoration: none;
+  color: #2c3e50;
+  cursor: pointer;
+}
+/* line 84, ../sass/style.scss */
+header .top-nav #top-link li {
+  display: inline-block;
+  margin-right: 10px;
+}
+/* line 87, ../sass/style.scss */
+header .top-nav #top-link li a {
+  color: #2980b9;
+  font-family: yekan;
+}
+/* line 90, ../sass/style.scss */
+header .top-nav #top-link li a span {
+  display: block;
+}
+/* line 96, ../sass/style.scss */
+header .top-nav #nav-absolute {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  margin-left: 80px;
+  margin-top: 60px;
+  height: 60px;
+  z-index: 9;
+  width: 1000px;
+}
+/* line 105, ../sass/style.scss */
+header .top-nav #nav-absolute .navbar {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+}
+/* line 109, ../sass/style.scss */
+header .top-nav #nav-absolute .navbar-default {
+  background-color: #2980b9 !important;
+  height: 80px;
+}
+/* line 113, ../sass/style.scss */
+header .top-nav #nav-absolute .navbar-default .navbar-nav li {
+  padding-top: 12px;
+}
+/* line 115, ../sass/style.scss */
+header .top-nav #nav-absolute .navbar-default .navbar-nav li a {
+  color: white;
+  font-size: 16px;
+  font-family: yekan !important;
+}
+/* line 119, ../sass/style.scss */
+header .top-nav #nav-absolute .navbar-default .navbar-nav li a:hover {
+  color: #2c3e50;
+}
+
+/* line 131, ../sass/style.scss */
+main {
+  position: relative;
+}
+/* line 133, ../sass/style.scss */
+main #slideshow {
+  height: 483px;
+  overflow: hidden !important;
+  z-index: -1;
+}
+/* line 138, ../sass/style.scss */
+main #main_titr {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #2980b9;
+  color: white;
+}
+/* line 147, ../sass/style.scss */
+main #main_titr span {
+  display: block;
+  padding-top: 50px;
+}
+/* line 152, ../sass/style.scss */
+main #services {
+  margin-top: 100px;
+}
+/* line 155, ../sass/style.scss */
+main #services .col-md-12 .title {
+  margin-bottom: 50px;
+  color: #2980b9;
+  font-weight: bolder;
+  line-height: 0.5;
+  text-align: center;
+}
+/* line 161, ../sass/style.scss */
+main #services .col-md-12 .title span {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  padding: 10px;
+}
+/* line 167, ../sass/style.scss */
+main #services .col-md-12 .title span:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid #2980b9;
+  border-top: 1px solid #2980b9;
+  top: 12px;
+  width: 300px;
+  right: 100%;
+  margin-right: 15px;
+}
+/* line 178, ../sass/style.scss */
+main #services .col-md-12 .title span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid #2980b9;
+  border-top: 1px solid #2980b9;
+  top: 12px;
+  width: 300px;
+  left: 100%;
+  margin-left: 15px;
+}
+/* line 192, ../sass/style.scss */
+main #services .col-md-4 {
+  margin: 0;
+  padding: 0;
+}
+/* line 195, ../sass/style.scss */
+main #services .col-md-4 .service-box {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  padding: 0;
+  height: 250px;
+}
+/* line 206, ../sass/style.scss */
+main #services .col-md-4 .service-box div {
+  padding-top: 15px;
+}
+/* line 208, ../sass/style.scss */
+main #services .col-md-4 .service-box div h4 {
+  color: white;
+}
+/* line 211, ../sass/style.scss */
+main #services .col-md-4 .service-box div h5 {
+  color: white;
+}
+/* line 218, ../sass/style.scss */
+main #teammate {
+  margin-top: 100px;
+}
+/* line 221, ../sass/style.scss */
+main #teammate .col-md-12 .title {
+  margin-bottom: 50px;
+  color: #2980b9;
+  font-weight: bolder;
+  line-height: 0.5;
+  text-align: center;
+}
+/* line 227, ../sass/style.scss */
+main #teammate .col-md-12 .title span {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  padding: 10px;
+}
+/* line 233, ../sass/style.scss */
+main #teammate .col-md-12 .title span:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid #2980b9;
+  border-top: 1px solid #2980b9;
+  top: 12px;
+  width: 300px;
+  right: 100%;
+  margin-right: 15px;
+}
+/* line 244, ../sass/style.scss */
+main #teammate .col-md-12 .title span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid #2980b9;
+  border-top: 1px solid #2980b9;
+  top: 12px;
+  width: 300px;
+  left: 100%;
+  margin-left: 15px;
+}
+/* line 259, ../sass/style.scss */
+main #teammate .col-md-4 .teammate-box {
+  padding: 20px;
+  background-color: white;
+  margin: 10px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+}
+/* line 269, ../sass/style.scss */
+main #teammate .col-md-4 .teammate-box div {
+  margin-bottom: 15px;
+}
+/* line 275, ../sass/style.scss */
+main #space_background {
+  margin-top: 100px;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: url("../img/space_background.jpg") fixed;
+}
+/* line 283, ../sass/style.scss */
+main #map {
+  height: 400px;
+  border-top: 3px solid #2980b9;
+}
+
+/* line 289, ../sass/style.scss */
+#register.modal {
+  font-family: yekan;
+}
+/* line 291, ../sass/style.scss */
+#register.modal .modal-content {
+  -moz-box-shadow: 0;
+  -webkit-box-shadow: 0;
+  box-shadow: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+/* line 294, ../sass/style.scss */
+#register.modal .modal-content .modal-header {
+  border: none !important;
+  background-color: #2980b9;
+  color: white;
+}
+/* line 300, ../sass/style.scss */
+#register.modal .modal-content .modal-body .form-group {
+  direction: rtl;
+  text-align: right;
+}
+/* line 304, ../sass/style.scss */
+#register.modal .modal-content .modal-body button {
+  background-color: #2980b9;
+  color: white;
+}
+
+/* line 312, ../sass/style.scss */
+footer {
+  height: 300px;
+  background-color: #2c3e50;
+  border-top: 3px solid #2980b9;
+}
+/* line 319, ../sass/style.scss */
+footer .container .row .col-md-4 #subscribe {
+  margin-top: 50px;
+}
+/* line 322, ../sass/style.scss */
+footer .container .row .col-md-4 #subscribe #user_email {
+  width: 100%;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+/* line 326, ../sass/style.scss */
+footer .container .row .col-md-4 #subscribe button {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+/* line 330, ../sass/style.scss */
+footer .container .row .col-md-4 h3 {
+  color: white;
+}
+/* line 333, ../sass/style.scss */
+footer .container .row .col-md-4 ul {
+  margin-top: 10px;
+}
+/* line 335, ../sass/style.scss */
+footer .container .row .col-md-4 ul li {
+  margin-top: 12px;
+  display: inline-block !important;
+  margin-left: 10px;
+  list-style-type: none;
+  direction: rtl;
+  text-align: right;
+  width: 100%;
+}
+/* line 343, ../sass/style.scss */
+footer .container .row .col-md-4 ul li a {
+  color: #bdc3c7;
+}
+/* line 345, ../sass/style.scss */
+footer .container .row .col-md-4 ul li a .titr {
+  padding-top: 5px;
+  padding-right: 5px;
+}
+/* line 353, ../sass/style.scss */
+footer .container .row .col-md-4 ul #licence_logo li img {
+  margin-right: 20px;
+}
+/* line 359, ../sass/style.scss */
+footer .container .row .col-md-4 ul#social_network {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+/* line 365, ../sass/style.scss */
+footer .container .row .col-md-4 ul#social_network li {
+  margin-left: 5px;
+  width: auto;
+}

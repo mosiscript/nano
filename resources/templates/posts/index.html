@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+<head>
+{% include "head.html" %}
+<body style="background:#f0f0f0">
+
+  {% include "header.html" %}
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+   src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0">
+  </script>
+
+{% include "posts/messages_display.html" %}
+<div class='container'>
+    <div style="height:70px"></div>
+    {% block content %}{% endblock %}
+</div>
+
+{% comment %} <img src='{% static "img/beach.jpg" %}' /> {% endcomment %}
+
+{% include "footer.html" %}
+</body>
+</html>
